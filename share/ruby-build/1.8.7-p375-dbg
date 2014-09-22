@@ -1,0 +1,6 @@
+require_gcc
+export CFLAGS='-Wall -Wextra -O0 -ggdb3'
+export CONFIGURE_OPTS='optflags=-O0 debugflags=-ggdb3 --enable-shared --without-tk --without-tcl'
+install_svn "ruby-1.8.7-p375" "http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_8_7" "44351" autoconf auto_tcltk standard
+unset CONFIGURE_OPTS
+install_package "rubygems-1.6.2" "http://production.cf.rubygems.org/rubygems/rubygems-1.6.2.tgz#0c95a9869914ba1a45bf71d3b8048420" ruby

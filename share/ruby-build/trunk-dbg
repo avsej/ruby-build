@@ -1,0 +1,6 @@
+export CFLAGS='-Wall -Wextra -O0 -ggdb3'
+export CPPFLAGS=$CFLAGS
+install_package "yaml-0.1.4" "http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz"
+export CONFIGURE_OPTS='optflags=-O0 debugflags=-ggdb3 --enable-shared'
+install_git "ruby-trunk" "git://github.com/ruby/ruby.git" "trunk" autoconf standard verify_openssl
+unset CONFIGURE_OPTS
